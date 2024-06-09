@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace learningtilemap
 {
-    public static class Library
+    public static class Data
     {
+        public static Block currentBlock;
+
         public static Tile[,] tileMap;
 
         public static int width = 10, height = 15, tileSize = 64;
@@ -34,5 +36,17 @@ namespace learningtilemap
 
             return texture;
         }
+        public static bool InBounds(int x, int y)
+        {
+            return 0 <= y && y < tileMap.GetLength(1) && 0 <= x && x < tileMap.GetLength(0);
+        }
+
+        public static int GetRandomInt(int min, int max)
+        {        
+            Random random = new();
+            int number = random.Next(min, max);
+            return number;
+        }
+
     }
 }

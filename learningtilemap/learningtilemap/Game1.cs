@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace learningtilemap
 {
@@ -8,10 +9,6 @@ namespace learningtilemap
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
-        private float timerDuration = 0.5f;
-        private float timer;
-        private Block currentBlock;
 
         public Game1()
         {
@@ -30,9 +27,10 @@ namespace learningtilemap
 
             base.Initialize();
 
-            Library.tileMap = Map.CreateMap(Library.width, Library.height);
+            Data.tileMap = Map.CreateMap(Data.width, Data.height);
 
-            timer = timerDuration;
+            //Data.currentBlock = new Block((BlockID)Data.GetRandomInt(0, Enum.GetNames(typeof(BlockID)).Length));
+            Data.currentBlock = new Block(BlockID.OBlock);
         }
 
         protected override void LoadContent()
@@ -41,7 +39,7 @@ namespace learningtilemap
 
             // TODO: use this.Content to load your game content here
 
-            Library.tileTexture = Library.CreateTexture(GraphicsDevice, Library.tileSize, Library.tileSize, pixel => Color.White);
+            Data.tileTexture = Data.CreateTexture(GraphicsDevice, Data.tileSize, Data.tileSize, pixel => Color.White);
         }
 
         protected override void Update(GameTime gameTime)
@@ -49,22 +47,22 @@ namespace learningtilemap
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            if (currentBlock != null)
+            Input.GetState();
+
+            if (Data.currentBlock != null)
             {
-                if (timer >= 0)
+                Data.currentBlock.Update(gameTime);
+                if (Data.currentBlock.isRemoved)
                 {
-                    // When a spesifed time has gone by run move for current block
-
-                    currentBlock.MoveDown();
-
-                    timer = timerDuration;
-                }
-                else
-                {
-                    timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                    Data.currentBlock = null;
                 }
             }
-
+            else
+            {
+                Map.CheckForFilledRow();
+                //Data.currentBlock = new Block((BlockID)Data.GetRandomInt(0, Enum.GetNames(typeof(BlockID)).Length));
+                Data.currentBlock = new Block(BlockID.OBlock);
+            }
             base.Update(gameTime);
         }
 
@@ -75,14 +73,18 @@ namespace learningtilemap
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            for (int x = 0; x < Library.width; x++)
+            for (int x = 0; x < Data.width; x++)
             {
-                for (int y = 0; y < Library.height; y++)
+                for (int y = 0; y < Data.height; y++)
                 {
-                    Library.tileMap[x, y].Draw(_spriteBatch);
+                    Data.tileMap[x, y].Draw(_spriteBatch);
                 }
             }
-
+            if (Data.currentBlock != null)
+            {
+                Data.currentBlock.Draw(_spriteBatch);
+            }
+  
             _spriteBatch.End();
 
 

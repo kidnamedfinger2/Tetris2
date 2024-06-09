@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("learningtilemap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7ee8002fd22083fd2969c1ccd5e5b00e64310fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("learningtilemap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("learningtilemap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

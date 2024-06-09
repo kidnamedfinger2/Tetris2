@@ -102,24 +102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andrej.gazivoda\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gaziv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andrej.gazivoda\\Desktop\\Program\\learningtilemap\\learningtilemap\\learningtilemap.csproj",
+      "projectUniqueName": "C:\\Users\\gaziv\\OneDrive\\Documents\\GitHub\\Tetris2\\learningtilemap\\learningtilemap\\learningtilemap.csproj",
       "projectName": "learningtilemap",
-      "projectPath": "C:\\Users\\andrej.gazivoda\\Desktop\\Program\\learningtilemap\\learningtilemap\\learningtilemap.csproj",
-      "packagesPath": "C:\\Users\\andrej.gazivoda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andrej.gazivoda\\Desktop\\Program\\learningtilemap\\learningtilemap\\obj\\",
+      "projectPath": "C:\\Users\\gaziv\\OneDrive\\Documents\\GitHub\\Tetris2\\learningtilemap\\learningtilemap\\learningtilemap.csproj",
+      "packagesPath": "C:\\Users\\gaziv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gaziv\\OneDrive\\Documents\\GitHub\\Tetris2\\learningtilemap\\learningtilemap\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\andrej.gazivoda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\gaziv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -170,7 +165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

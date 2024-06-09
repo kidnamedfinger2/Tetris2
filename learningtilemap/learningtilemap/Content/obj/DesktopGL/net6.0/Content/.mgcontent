@@ -4,8 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/andrej.gazivoda/Desktop/Program/learningtilemap/learningtilemap/Content/tetristile0.png</File>
-    <File>C:/Users/andrej.gazivoda/Desktop/Program/learningtilemap/learningtilemap/Content/tetristile1.png</File>
+    <File>C:/Users/gaziv/OneDrive/Documents/GitHub/Tetris2/learningtilemap/learningtilemap/Content/tetristile0.png</File>
+    <File>C:/Users/gaziv/OneDrive/Documents/GitHub/Tetris2/learningtilemap/learningtilemap/Content/tetristile1.png</File>
   </SourceFiles>
   <DestFiles>
     <File>tile0.png</File>
